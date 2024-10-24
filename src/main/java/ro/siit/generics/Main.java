@@ -1,5 +1,8 @@
 package ro.siit.generics;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Gift gift = new Gift();
@@ -20,5 +23,8 @@ public class Main {
 
         Present presentPresent = new Present(new Book("Scufita Rosie"));
         ((Book)presentPresent.getContent()).getTitle();
+
+        List<Present<?>> bookPresents = new ArrayList<>();
+        bookPresents.add(presentPresent);
     }
 }
