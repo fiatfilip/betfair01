@@ -12,6 +12,7 @@ public class SetMain {
         LocalDateTime now = LocalDateTime.now();
         Payment p1 = new Payment(id, 100.0, now);
         Payment p2 = new Payment(id, 100.0, now);
+        Payment p3 = p1;
 
         System.out.println(p1);
         System.out.println(p2);
@@ -19,6 +20,7 @@ public class SetMain {
 
         payments.add(p1);
         payments.add(p2);
+        payments.add(p3);
 
         System.out.println(payments.size());
 
