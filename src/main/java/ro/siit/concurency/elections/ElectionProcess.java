@@ -17,6 +17,7 @@ public class ElectionProcess {
 
         Thread pollThread = new Thread(new Poll(ballotBox));
         pollThread.setDaemon(true);
+        pollThread.setPriority(11);
         pollThread.start();
 
         for (int i = 0; i < voters.length; i++) {
